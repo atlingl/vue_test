@@ -2,21 +2,16 @@
   <div>
     <h1 v-text="msg" ref="title"></h1>
     <button @click="showDOM">点我返回上方DOM元素</button>
-    <hr>
-    <Student ref="sch" name="张三" sex="女" :age="18"></Student>
-    <hr>
-    <Student name="李四" sex="男" :age="22"></Student>
-    <hr>
-  
+    <school ref="sch"></school>
   </div>
 </template>
 
 <script>
 //引入School组件
-import Student from './components/Student.vue'
+import School from './components/School.vue'
 export default {
   name:'App',
-  components:{Student},
+  components:{School},
   data(){
     return{
       msg:'你好啊,Vue!'
